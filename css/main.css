@@ -44,6 +44,7 @@ nav ul li a {
   font-size: 18px;
   position: relative;
   letter-spacing: 2.5px;
+  transition: 0.2s;
 }
 nav ul li a::after {
   content: "";
@@ -70,7 +71,7 @@ nav ul li:hover a::after {
   margin-top: 50%;
   border-radius: 100%;
   animation-name: upAndDown;
-  animation-duration: 1s;
+  animation-duration: 2.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -241,8 +242,64 @@ footer {
   padding: 20px;
   letter-spacing: 2.5px;
 }
-footer span{
-    color: #ff004f;
+footer span {
+  color: #ff004f;
+}
+#header .container .menu {
+  display: none;
+}
+
+/* Media for small screen --------------------*/
+@media (max-width: 1010px) {
+  #header .container ul {
+    position: absolute;
+    top: 2%;
+    right: -500px;
+    width: 200px;
+    height: fit-content;
+    background-color: #ff004ff7;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: bold;
+    z-index: 1;
+    border-radius: 15px;
+  }
+  #header .container ul li:hover a {
+    margin-left: 5px;
+  }
+  #header .container .fa-bars {
+    position: absolute;
+    right: 5%;
+  }
+  #header .container .menu {
+    display: block;
+    font-size: 27px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 860px) {
+  .header-content img {
+    display: none;
+  }
+  #header .header-content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 50%;
+  }
+  #header .header-content .text {
+    font-size: 25px;
+  }
+  #about .about-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  #about .about-row .about-col-2 ul {
+    padding: 0;
+    list-style-type: none;
+  }
 }
 
 /* Animation----------------- */

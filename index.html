@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/Normaliz.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>test</title>
+    <title>Mohamed Kamal Portfolio</title>
   </head>
   <body>
     <!-- header----------------- -->
@@ -14,14 +14,16 @@
       <div class="container">
         <nav>
           <h2 class="logo"><span>M</span>ohamed.K</h2>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <i class="fa-solid fa-x menu " onclick="closedmenu()"></i>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
+          <i class="fa-solid fa-bars menu" onclick="openmenu()"></i>
         </nav>
-        <div class="header-content">
+        <div id="home" class="header-content">
           <div class="text">
             <p>Hi There!</p>
             <h2>I'm <span>Mohamed Kamal</span></h2>
@@ -104,19 +106,19 @@
             <h1>Contact Me</h1>
             <p>
               <i class="fa-solid fa-paper-plane"></i>
-              <a href="#">mk126105@gmail.com</a>
+              <a href="mk126105@gmail.com">mk126105@gmail.com</a>
             </p>
             <p><i class="fa-solid fa-phone"></i> 01201130866</p>
             <div class="icon">
-              <a href=""><i class="fa-brands fa-facebook"></i></a>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
-              <a href=""><i class="fa-brands fa-github"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              <a target="_blank" href="https://www.facebook.com/profile.php?id=100006031399403"><i class="fa-brands fa-facebook"></i></a>
+              <a target="_blank" href="https://twitter.com/Mohamed83173083"><i class="fa-brands fa-twitter"></i></a>
+              <a target="_blank" href="https://github.com/mohamedkamal2222"><i class="fa-brands fa-github"></i></a>
+              <a target="_blank" href="https://instagram.com/mo7amedkamal74?igshid=OGY3MTU3OGY1Mw== "><i class="fa-brands fa-instagram"></i></a>
+              <a target="_blank" href=""><i class="fa-brands fa-linkedin"></i></a>
             </div>
           </div>
           <div class="col-rigth">
-            <form action="">
+            <form  action="">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
@@ -129,7 +131,7 @@
                 rows="6"
                 placeholder="Your Message"
               ></textarea>
-              <button type="submit">Submit</button>
+              <button  action="mk126105@gmail.com" type="submit">Submit</button>
             </form>
           </div>
         </div>
@@ -138,5 +140,6 @@
     <footer>
       <p>Made By <span>Mohamed Kamal</span></p>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
