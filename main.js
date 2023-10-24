@@ -6,7 +6,7 @@ function closedmenu() {
   sideMenu.style.right = "-500px";
 }
 
-// ------------------------------------------
+// -------------------------------------------------------------
 function sendMail() {
   Email.send({
     SecureToken: "1c828b0b-ad3c-4079-8560-b5bbece6c55b",
