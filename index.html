@@ -15,7 +15,7 @@
         <nav>
           <h2 class="logo"><span>M</span>ohamed.K</h2>
           <ul id="sidemenu">
-            <i class="fa-solid fa-x menu " onclick="closedmenu()"></i>
+            <i class="fa-solid fa-x menu" onclick="closedmenu()"></i>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#project">Project</a></li>
@@ -110,28 +110,50 @@
             </p>
             <p><i class="fa-solid fa-phone"></i> 01201130866</p>
             <div class="icon">
-              <a target="_blank" href="https://www.facebook.com/profile.php?id=100006031399403"><i class="fa-brands fa-facebook"></i></a>
-              <a target="_blank" href="https://twitter.com/Mohamed83173083"><i class="fa-brands fa-twitter"></i></a>
-              <a target="_blank" href="https://github.com/mohamedkamal2222"><i class="fa-brands fa-github"></i></a>
-              <a target="_blank" href="https://www.instagram.com/mo7amedkamal74/?igshid=OGY3MTU3OGY1Mw%3D%3D"><i class="fa-brands fa-instagram"></i></a>
-              <a target="_blank" href=""><i class="fa-brands fa-linkedin"></i></a>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/profile.php?id=100006031399403"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a target="_blank" href="https://twitter.com/Mohamed83173083"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a target="_blank" href="https://github.com/mohamedkamal2222"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/mo7amedkamal74/?igshid=OGY3MTU3OGY1Mw%3D%3D"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a target="_blank" href=""
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </div>
           </div>
           <div class="col-rigth">
-            <form  action="" name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required />
+            <form onsubmit="sendMail();reset();return false;">
               <input
+                type="text"
+                id="name"
+                name="Name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                id="email"
                 type="email"
                 name="Email"
                 placeholder="Your Email"
                 required
               />
               <textarea
+                id="Message"
                 name="Message"
                 rows="6"
                 placeholder="Your Message"
               ></textarea>
-              <button  action="mk126105@gmail.com" type="submit">Submit</button>
+              <button action="mk126105@gmail.com" type="submit">Submit</button>
             </form>
           </div>
         </div>
@@ -140,6 +162,24 @@
     <footer>
       <p>Made By <span>Mohamed Kamal</span></p>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendMail() {
+        Email.send({
+          SecureToken: "1c828b0b-ad3c-4079-8560-b5bbece6c55b",
+          To: `mk126105@gmail.com`,
+          From: "mk126105@gmail.com",
+          Subject: "Test Email",
+          Body:
+            "Name : " +
+            document.getElementById("name").value +
+            "<br> Email: " +
+            document.getElementById("email").value +
+            "<br> Messege: " +
+            document.getElementById("Message").value,
+        }).then((message) => alert("Massage Send Succesfully"));
+      }
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
