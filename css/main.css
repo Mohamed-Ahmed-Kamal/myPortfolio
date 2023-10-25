@@ -152,7 +152,7 @@ nav ul li:hover a::after {
   position: relative;
   overflow: hidden;
 }
-#project .container .projects .img div a {
+#project .container .projects .img div .button {
   top: 45%;
   position: absolute;
   transform: translateX(-50%);
@@ -162,6 +162,13 @@ nav ul li:hover a::after {
   padding: 8px;
   border-radius: 10px;
   transition: 0.3s;
+}
+#project .container .projects .img div .dimo{
+  left: 31%;
+}
+#project .container .projects .img div .inf{
+  
+  left: 75%;
 }
 #project .container .projects .img div{
   position: absolute;
