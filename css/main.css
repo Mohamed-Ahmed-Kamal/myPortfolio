@@ -19,6 +19,9 @@
 .container {
   padding: 10px 10%;
 }
+mo{
+  background-color: #ff004f;
+}
 nav {
   display: flex;
   align-items: center;
