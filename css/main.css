@@ -7,6 +7,22 @@
   scroll-behavior: smooth;
   color: white;
 }
+#scroll-bt {
+  position: fixed;
+  background-color: #ff004f;
+  font-size: 35px;
+  padding: 5px;
+  font-weight: 900;
+  bottom: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+  display: none;
+  z-index: 101;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
 
 /* header and landing------------ */
 
@@ -19,7 +35,7 @@
 .container {
   padding: 10px 10%;
 }
-mo{
+mo {
   background-color: #ff004f;
 }
 nav {
